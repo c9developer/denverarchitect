@@ -6,7 +6,6 @@ socket.on("connect", function() {
 
 socket.on("notice", function(msg) {
     // Notices (user join, user leave...)
-    alert(msg.type);
 });
 
 socket.on("chat", function(msg) {
