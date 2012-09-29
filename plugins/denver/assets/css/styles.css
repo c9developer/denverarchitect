@@ -5,15 +5,118 @@
 
 html, body {
     font-family: "Helvetica";
+    background: #333;
 }
 
-#chat_input {
-    width: 100%;
-    border: none;
-    border-top: 1px solid #333;
+#chat_input_wrapper {
+    background: #fff;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
     position: fixed;
     bottom: 0;
     left: 0;
+    width: 100%;
+    
+}
+
+#chat_input {
+    border: none;
     padding: 5px 0;
     font-size: 14px;
+    margin: 0 5px;
+    width: 100%;
+    outline: none;
+}
+
+#chat_output_container {
+    margin-top: 30px;
+}
+.chat_msg {
+    font-size: 13px;
+    font-family: Helvetica;
+    font-weight: 100;
+    padding: 3px 5px;
+    color: #fff;
+    text-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes example {
+    0% { -webkit-transform: rotate(0deg); }
+    25% { -webkit-transform: rotate(3deg); }
+    50%   { -webkit-transform: rotate(0deg); }
+    75%   { -webkit-transform: rotate(-3deg); }
+}
+
+.chat_msg.earthquake {
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+.chat_msg.wave {
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 2.2s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+.username {
+    color: #57B5FF;
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+#header {
+    padding: 10px 15px;
+    opacity: 0.9;
+    border-bottom: 1px solid #444;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#header h1 {
+    color: #fff;
+    font-weight: 100;
+}
+
+#earthquake {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 10px;
+    border: 1px solid #666;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: #87e0fd;
+    background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(40%,#53cbf1), color-stop(100%,#05abe0));
+    background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    background: -o-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    background: -ms-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 );
+}
+
+#wave {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 140px;
+    border: 1px solid #666;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: #87e0fd;
+    background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(40%,#53cbf1), color-stop(100%,#05abe0));
+    background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    background: -o-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    background: -ms-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    background: linear-gradient(to bottom,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 );
 }
